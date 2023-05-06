@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-def product_args_before_min(*args):
+def sum_args_after_min(*args):
     if args:
-        # Принимает минимальное значения среди всех аргументов
+        # Находим минимальное значение среди всех аргументов
         min_value = min(args)
-        # Принимает индекс минимального значения среди всех аргументов
+        # Находим индекс минимального значения среди всех аргументов
         min_index = args.index(min_value)
-        return min_index * sum(args[:min_index])
+        # Суммируем все аргументы, расположенные после индекса минимального значения
+        return sum(args[min_index+1:])
     return None
 
 
 if __name__ == "__main__":
-    print(product_args_before_min(1, 2, 3, 4, 5, 6, 7))
-    print(product_args_before_min(11, 7, 13, 4, 2, 3))
-    print(product_args_before_min())
+    print(sum_args_after_min(1, 2, 3, 4, 5, 6, 7))
+    print(sum_args_after_min(11, 7, 13, 4, 2, 3))
+    print(sum_args_after_min())
