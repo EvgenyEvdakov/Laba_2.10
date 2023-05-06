@@ -6,4 +6,4 @@ def harmonic(*args):
 
 
 if __name__ == "__main__":
-    print(harmonic(4, 2, 1))
+    print(harmonic(2, 1, 7))
